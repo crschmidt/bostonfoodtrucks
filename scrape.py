@@ -8,6 +8,11 @@ stops = soup.findAll("tr")[1:]
 data = {
     'locations': json.load(open("locations.js"))
 }
+locs_array = []
+for k, v in data['locations'].items():
+        v['id'] = k
+	locs_array.append(v)
+data['locations_array'] = locs_array
 stop_data = []
 
 
